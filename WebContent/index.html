@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"> 
+	<title>Commentaire</title>
+	<!--  -->
+	<link rel="stylesheet" href="app/library/bootstrap/dist/css/bootstrap.css"/>
+    <link href="app/public/css/app.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="app/library/ngprogress/ngProgress.css">
+	
+	<script src="app/library/angular/angular.min.js"></script>
+    <script src="app/library/angular-resource/angular-resource.js"></script>
+    <script src="app/library/angular-route/angular-route.js"></script>
+    <script src="app/library/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="app/library/angular-cookies/angular-cookies.min.js"></script>
+    <script src="app/library/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="app/library/jquery/dist/jquery.min.js"></script>
+	<script src="app/library/angular-md5/angular-md5.min.js"></script>
+	<script src="app/library/ngprogress/build/ngprogress.min.js"></script>
+	<script src="app/library/ng-file-upload-bower-12.2.13/ng-file-upload.js"></script>
+	<script src="app/library/ng-file-upload-bower-12.2.13/ng-file-upload-shim.min.js"></script>
+
+</head>
+<body ng-app="commentApp" class="body">
+
+	<div class="container">
+	<div class="row">
+        <div data-ui-view="header" id="header">
+			
+        </div>
+        <div class="" id="page" ui-view="content">
+
+        </div>
+        <div class="footer" ui-view="footer" id="footer">
+
+        </div>
+     </div>           
+     </div>  
+
+	<script src="app/app.js"></script>
+	<script src="app/modules/comment/comment_controller.js"></script>
+	<script src="app/modules/comment/comment_service.js"></script>
+	<script src="app/modules/core/auth_controller.js"></script>
+	<script src="app/modules/core/auth_service.js"></script>
+	
+</body>
+</html>

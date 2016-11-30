@@ -1,0 +1,43 @@
+<div class="content" ng-controller="commentController">
+<div class="row">
+    <div class="col-sm-12">
+    <h3>Comments</h3><br>
+    </div><!-- /col-sm-12 -->
+    </div><!-- /row -->
+    
+    <div class="form-group">
+		     <textarea class="col-sm-9 comment" rows="2" id="comment" placeholder="Enter your comment..."></textarea>&nbsp;&nbsp;&nbsp;
+			 <button class="col-sm-1 btn btn-default" ng-click="addComment()"> Add </button>
+	</div>
+	
+    <br><br><br>
+    <div class="row" id="comment-list">
+    	<div class="col-sm-12" data-ng-repeat="comment in comments" id="{{comment.idComment}}">
+    		<div class="col-sm-1">
+	    		<div class="thumbnail">
+	    			<img class="img-responsive user-photo" src="app/public/images/user_image.jpeg">
+	    		</div><!-- /thumbnail -->
+	    	</div><!-- /col-sm-1 -->
+	    	<div class="col-sm-11">
+	    		<div class="panel panel-default">
+	    			<div class="panel-heading">
+	    				<strong>{{comment.user.fullname}}</strong> <span class="text-muted pull-right">Posted on: <strong>{{comment.timeInserted}}</strong></span>
+	    			</div>
+	    			<div class="panel-body">
+	    				<div id="div_{{comment.idComment}}">
+	    					{{comment.content}}
+	    				</div>
+	    				<textarea id="text_{{comment.idComment}}" class="col-sm-11 hide"  rows="2" ng-keypress="update($event,comment)">{{comment.content}}</textarea>
+	    				
+	    				<div class="pull-right" ng-if="commentGlobals.currentUser.idUser == comment.user.idUser"> 
+	    					<span class="glyphicon glyphicon-edit text-success" title="edit" ng-click="toggleDivToTextArray(comment.idComment)"></span>&nbsp;&nbsp;
+	    					<span class="glyphicon glyphicon-remove text-danger" title="remove" ng-click="deleteComment(comment.idComment)"></span>
+	    				</div>
+	    				
+	    			</div><!-- /panel-body -->
+	    		</div><!-- /panel panel-default -->
+	    	</div><!-- /col-sm-5 -->
+    	</div>
+	</div><!-- /row -->
+
+</div><!-- /container -->

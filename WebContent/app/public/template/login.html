@@ -1,0 +1,63 @@
+<div class="col-sm-4" >
+        
+    </div>   
+    <div class="login col-sm-4">
+        <div class="row">
+            <div class="col-sm-12  round-corners" id="login-box" ng-controller="AuthController">                
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <div class="row">
+                        <form id="login-form" name="loginForm" class="col-sm-12">
+                        	<div class="row">
+                        		<div class="com-sm-12 error">
+                        			<div class="col-sm-12">{{logginWarning}}</div>
+                        		</div>                        	
+                        	</div>
+                            <div class="row">
+                                <div  class="col-sm-12">
+                                    <label>Login ID:</label>
+                                    <input required="required" type="text" name="username" ng-model="username" class="col-sm-12">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label>Password:</label>
+                                    <input required="required" type="password" name="password" ng-model="password" class="col-sm-12">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12"> <br>
+                                    <button class="col-sm-12" ng-click="login()">Login</button>                                    
+                                </div>
+                            </div>
+                        </form>
+                    </div>   
+                </div>
+                
+                </div>
+            
+            	<div class="row">
+            		<form>
+						<fieldset>
+							<legend> TEST! </legend>
+								<input type="file" fileread/>
+								
+								<button class="btn btn-default" ng-click="upload()">Upload!!</button>
+								<img src="fileread" class="thumb"> !!!
+								
+								<input ngf-select="" ng-model="picFile" name="file" ngf-accept="'image/*'" required="" type="file">
+								<img ngf-src="picFile" class="thumb">111
+						</fieldset>
+					</form>
+            	</div>
+            </div>
+        </div>
+    </div>
+    
+<div class="col-sm-4 upload">
+	    <form action="http://localhost:8080/Commentaire/upload" method="post" enctype="multipart/form-data">  
+    Select File: <input type="file" name="file"/>  
+    <input type="submit" value="Upload File"/>  
+    </form>  
+</div>
